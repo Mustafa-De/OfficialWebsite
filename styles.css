@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.bg-gradient-radial {
+    background: radial-gradient(circle, rgba(16,24,39,1) 0%, rgba(17,24,39,1) 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #48bb78;
+}
+
+.btn-primary {
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.2);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tech-glow {
+    text-shadow: 0 0 10px rgba(79, 172, 254, 0.5), 0 0 20px rgba(79, 172, 254, 0.3);
+}
+
+.neon-border {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #4facfe, #00f2fe);
+    border-image-slice: 1;
+}
+
+.btn-disabled {
+    color: #9CA3AF;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    background: #F3F4F6;
+    border: 1px solid #E5E7EB;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-disabled:hover {
+    background: #F3F4F6;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 移动端菜单样式 */
+.mobile-menu {
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .btn-primary, .btn-disabled {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 确保容器在小屏幕上有适当的边距 */
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* 图片响应式 */
+img {
+    max-width: 100%;
+    height: auto;
+}
